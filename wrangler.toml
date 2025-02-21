@@ -16,15 +16,15 @@ CUSTOM_DOMAIN = "2n9.co"
 
 [env.production]
 name = "cloudflare-docker-proxy"
-# routes = [
-#   { pattern = "docker.2n9.co", custom_domain = true },
-#   { pattern = "quay.2n9.co", custom_domain = true },
-#   { pattern = "gcr.2n9.co", custom_domain = true },
-#   { pattern = "k8s-gcr.2n9.co", custom_domain = true },
-#   { pattern = "k8s.2n9.co", custom_domain = true },
-#   { pattern = "ghcr.2n9.co", custom_domain = true },
-#   { pattern = "cloudsmith.2n9.co", custom_domain = true },
-# ]
+routes = [
+  { pattern = "docker.2n9.co", custom_domain = true },
+  { pattern = "quay.2n9.co", custom_domain = true },
+  { pattern = "gcr.2n9.co", custom_domain = true },
+  { pattern = "k8s-gcr.2n9.co", custom_domain = true },
+  { pattern = "k8s.2n9.co", custom_domain = true },
+  { pattern = "ghcr.2n9.co", custom_domain = true },
+  { pattern = "cloudsmith.2n9.co", custom_domain = true },
+]
 
 [env.production.vars]
 MODE = "production"
