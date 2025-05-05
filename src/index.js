@@ -33,7 +33,7 @@ function routeByHosts(host) {
 async function handleRequest(request) {
   const url = new URL(request.url);
   const upstream = routeByHosts(url.hostname);
-  if (upstream === "") {
+  if (!url.pathname.startsWith("/v2/") || upstream === "") {
     return new Response(
       JSON.stringify({
         routes: routes,
